@@ -1,0 +1,15 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontFamily": "Inconsolata-dz, Monaco, 'Courier New', monospace",
+    "editor.tabSize": 4,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true
+    },
+    "workbench.editor.showTabs": false,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "block"
+}
