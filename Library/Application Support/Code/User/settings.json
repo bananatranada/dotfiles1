@@ -1,7 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
     "editor.fontFamily": "Inconsolata-dz, Monaco, 'Courier New', monospace",
-    "editor.tabSize": 4,
+    "editor.tabSize": 2,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -9,7 +9,7 @@
         "**/.DS_Store": true,
         "**/node_modules": true
     },
-    "workbench.editor.showTabs": false,
-    "editor.cursorBlinking": "solid",
-    "editor.cursorStyle": "block"
+  "workbench.editor.showTabs": false,
+  "files.associations": {"*.js":"typescriptreact"}
+  // "explorer.openEditors.visible": 0
 }

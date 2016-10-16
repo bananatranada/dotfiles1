@@ -1,19 +1,18 @@
-set nocompatible
 syntax on
 set number
-set ruler
+set autoindent
+set smartindent
+set lazyredraw
 set visualbell
-set encoding=utf-8
-set wrap
-set textwidth=79
+set backspace=indent,eol,start
+set timeoutlen=500
+set hlsearch
+set hidden
+set ignorecase smartcase
 set tabstop=2
 set shiftwidth=2
-set softtabstop=2
-set expandtab
-set noshiftround
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-set showmatch
+set expandtab smarttab
+set encoding=utf-8
 
+vnoremap > >gv
+vnoremap < <gv

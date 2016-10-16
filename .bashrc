@@ -4,6 +4,7 @@ alias notes="vim ~/Dropbox/notes.md"
 
 ### ENV
 
+. "$HOME/.tkns"
 export EDITOR="/usr/bin/vim"
 
 
@@ -20,6 +21,8 @@ parse_git_branch() {
 export PS1="\[$(tput bold)\]\[$(tput setaf 5)\]\[$(tput setaf 6)\]\w\[$(tput setaf 3)\]\$(parse_git_branch) \[$(tput sgr0)\]"
 # clean downloads directory
 alias cleand="rm $HOME/Downloads/{*.zip,*.dmg}"
+# include hidden files when globbing
+shopt -s dotglob
 
 ### SOURCE
 

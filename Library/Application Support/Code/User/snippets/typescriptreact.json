@@ -1,0 +1,42 @@
+{
+/*
+	 // Place your snippets for TypeScript React here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+	 // Example:
+	 "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+	"React component": {
+		"prefix": "comp",
+		"description": "Create a React component",
+		"body": [
+			"import React, { Component, PropTypes } from 'react'",
+			"",
+			"class $1 extends Component {",
+			"\tconstructor(props) {",
+			"\t\tsuper(props)",
+			"\t}",
+			"",
+			"\trender() {",
+			"\t\treturn (",
+			"\t\t\t<div>",
+			"\t\t\t\t$1",
+			"\t\t\t</div>",
+			"\t\t)",
+			"\t}",
+			"}",
+			"",
+			"$1.proptypes = {}",
+			"$1.defaultProps = {}",
+			"",
+			"export default $1"
+		]
+	}
+}

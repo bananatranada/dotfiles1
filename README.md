@@ -43,6 +43,7 @@ Make sure to source `.bashrc` if this is the first time
 
 ### install apps
 
+brew install vim
 brew install git
 brew install wget
 brew install go
