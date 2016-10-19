@@ -18,16 +18,20 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="\[$(tput bold)\]\[$(tput setaf 5)\]\[$(tput setaf 6)\]\w\[$(tput setaf 3)\]\$(parse_git_branch) \[$(tput sgr0)\]"
-# clean downloads directory
-alias cleand="rm $HOME/Downloads/{*.zip,*.dmg}"
+export PS1="\[$(tput bold)\]\[$(tput setaf 5)\]\[$(tput setaf 6)\]\W\[$(tput setaf 3)\]\$(parse_git_branch) \[$(tput sgr0)\]"
 # include hidden files when globbing
 shopt -s dotglob
 
-### SOURCE
+### SCRIPTS
 
 # cd --
 . ~/.bash-scripts/acd_func.sh
+# save brew packages to dotfiles
+if [ -f "/usr/local/bin/brew" ]; then
+  (brew ls > "$HOME/.brew_formulas" &) > /dev/null 2>&1
+fi
+# clean downloads directory
+alias cleand="mv $HOME/Downloads/{*.zip,*.dmg} $HOME/.Trash > /dev/null 2>&1"
 
 
 ### ETC
@@ -35,15 +39,11 @@ shopt -s dotglob
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
-# HOMEBREW
-export HOMEBREW_GITHUB_API_TOKEN=028863f6472c2cbd334852a3f4261daafbfc1441
 # Ctrl+s (opposite of Ctrl+r)
 stty -ixon
 # NVM
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
-# YARN
-YARN_PATH="$HOME/.yarn/bin"
 # GO
 export GOPATH="$HOME/dev/go"
 
