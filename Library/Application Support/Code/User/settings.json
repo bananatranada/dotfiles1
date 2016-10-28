@@ -10,6 +10,8 @@
         "**/node_modules": true
     },
   "workbench.editor.showTabs": false,
-  "files.associations": {"*.js":"typescriptreact"}
-  // "explorer.openEditors.visible": 0
+  "files.associations": {"*.js":"typescriptreact"},
+    "explorer.openEditors.visible": 0,
+  "editor.wordWrap": true,
+  "editor.rulers": [80]
 }

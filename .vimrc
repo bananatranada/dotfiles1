@@ -13,6 +13,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab smarttab
 set encoding=utf-8
+set colorcolumn=80
 
 vnoremap > >gv
 vnoremap < <gv
