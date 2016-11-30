@@ -9,7 +9,7 @@
         "**/.DS_Store": true,
         "**/node_modules": true
     },
-  "workbench.editor.showTabs": false,
+  //"workbench.editor.showTabs": false,
   "files.associations": {"*.js":"typescriptreact"},
     "explorer.openEditors.visible": 0,
   "editor.wordWrap": true,

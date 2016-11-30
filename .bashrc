@@ -4,12 +4,18 @@ alias notes="vim ~/Dropbox/notes.md"
 
 ### ENV
 
-. "$HOME/.tkns"
 export EDITOR="/usr/bin/vim"
+if [[ -f "${HOME}/.ssh/id_rsa.pub" ]]; then
+  export SSH_FINGERPRINT="$((awk '{print $2}' ~/.ssh/id_rsa.pub \
+    | base64 --decode | md5 | sed 's/../&:/g; s/:*$//') 2>/dev/null)"
+fi
+. "$HOME/.tkns"
 
 
 ### ALIAS
 
+# ll
+alias ll="ls -lhA"
 # color directories
 alias ls="ls -G"
 # cfg-init.sh (dotfiles)
@@ -49,4 +55,4 @@ export GOPATH="$HOME/dev/go"
 
 
 ### PATH
-export PATH="$PATH"
+export PATH="$GOPATH/bin:$PATH"
